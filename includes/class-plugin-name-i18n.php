@@ -24,6 +24,9 @@
  * @subpackage Plugin_Name/includes
  * @author     Your Name <email@example.com>
  */
+
+namespace wpBootstrapRecent;
+
 class Plugin_Name_i18n {
 
 
