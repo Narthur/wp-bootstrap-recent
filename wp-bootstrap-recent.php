@@ -26,15 +26,19 @@
  */
 
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+namespace {
+	if ( ! defined( 'WPINC' ) ) {
+		die;
+	}
 }
+
+namespace wpBootstrapRecent;
 
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-plugin-name-activator.php
  */
-function activate_plugin_name() {
+function activate() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-activator.php';
 	Plugin_Name_Activator::activate();
 }
@@ -43,7 +47,7 @@ function activate_plugin_name() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-plugin-name-deactivator.php
  */
-function deactivate_plugin_name() {
+function deactivate() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-deactivator.php';
 	Plugin_Name_Deactivator::deactivate();
 }
