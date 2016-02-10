@@ -34,26 +34,13 @@ namespace {
 
 namespace bootstrap_slider_space {
 	function activate() {
-		require_once plugin_dir_path( __FILE__ ) . 'includes/class-bootstrap_slider-activator.php';
-		Plugin_Name_Activator::activate();
+		// activate
 	}
 
 	function deactivate() {
-		require_once plugin_dir_path( __FILE__ ) . 'includes/class-bootstrap_slider-deactivator.php';
-		Bootstrap_Slider_Deactivator::deactivate();
+		// deactivate
 	}
 
-	register_activation_hook( __FILE__, 'activate_plugin_name' );
-	register_deactivation_hook( __FILE__, 'deactivate_plugin_name' );
-
-	require plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name.php';
-
-	function run() {
-
-		$plugin = new bootstrap_slider();
-		$plugin->run();
-
-	}
-
-	run();
+	register_activation_hook( __FILE__, 'activate' );
+	register_deactivation_hook( __FILE__, 'deactivate' );
 }
