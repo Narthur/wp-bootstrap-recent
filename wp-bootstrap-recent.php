@@ -41,6 +41,12 @@ namespace bootstrap_slider_space {
 		// deactivate
 	}
 
-	register_activation_hook( __FILE__, 'activate' );
-	register_deactivation_hook( __FILE__, 'deactivate' );
+	register_activation_hook( __FILE__, 'bootstrap_slider_space\\activate' );
+	register_deactivation_hook( __FILE__, 'bootstrap_slider_space\\deactivate' );
+
+	function say_hi( $atts ) {
+		return 'hello';
+	}
+
+	add_shortcode( 'bootstrap_slider', 'bootstrap_slider_space\\say_hi' );
 }
