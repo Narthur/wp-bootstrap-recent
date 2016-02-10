@@ -32,15 +32,15 @@ namespace {
 	}
 }
 
-namespace wpBootstrapRecent {
+namespace bootstrap_slider_space {
 	function activate() {
-		require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-activator.php';
+		require_once plugin_dir_path( __FILE__ ) . 'includes/class-bootstrap_slider-activator.php';
 		Plugin_Name_Activator::activate();
 	}
 
 	function deactivate() {
-		require_once plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name-deactivator.php';
-		Plugin_Name_Deactivator::deactivate();
+		require_once plugin_dir_path( __FILE__ ) . 'includes/class-bootstrap_slider-deactivator.php';
+		Bootstrap_Slider_Deactivator::deactivate();
 	}
 
 	register_activation_hook( __FILE__, 'activate_plugin_name' );
@@ -48,12 +48,12 @@ namespace wpBootstrapRecent {
 
 	require plugin_dir_path( __FILE__ ) . 'includes/class-plugin-name.php';
 
-	function run_plugin_name() {
+	function run() {
 
-		$plugin = new Plugin_Name();
+		$plugin = new bootstrap_slider();
 		$plugin->run();
 
 	}
-	
-	run_plugin_name();
+
+	run();
 }
