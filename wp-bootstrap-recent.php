@@ -44,9 +44,15 @@ namespace bootstrap_slider_space {
 	register_activation_hook( __FILE__, 'bootstrap_slider_space\\activate' );
 	register_deactivation_hook( __FILE__, 'bootstrap_slider_space\\deactivate' );
 
-	function say_hi( $atts ) {
-		return 'hello';
+	function slider( $atts ) {
+		return '<p>I\'m a slider</p>';
 	}
 
-	add_shortcode( 'bootstrap_slider', 'bootstrap_slider_space\\say_hi' );
+	add_shortcode( 'bootstrap_slider', 'bootstrap_slider_space\\slider' );
+
+	function slider_recent( $atts ) {
+		return '<p>I\'m a recent posts slider</p>';
+	}
+
+	add_shortcode( 'bootstrap_slider_recent', 'bootstrap_slider_space\\slider_recent' );
 }
