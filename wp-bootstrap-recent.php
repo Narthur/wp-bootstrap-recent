@@ -27,12 +27,15 @@
 
 // If this file is called directly, abort.
 namespace {
+
 	if ( ! defined( 'WPINC' ) ) {
 		die;
 	}
+
 }
 
 namespace bootstrap_slider_space {
+
 	function activate() {
 		// activate
 	}
@@ -49,4 +52,5 @@ namespace bootstrap_slider_space {
 	}
 
 	add_shortcode( 'bootstrap_slider', 'bootstrap_slider_space\\slider' );
+
 }
