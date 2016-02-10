@@ -49,10 +49,4 @@ namespace bootstrap_slider_space {
 	}
 
 	add_shortcode( 'bootstrap_slider', 'bootstrap_slider_space\\slider' );
-
-	function slider_recent( $atts ) {
-		return '<p>I\'m a recent posts slider</p>';
-	}
-
-	add_shortcode( 'bootstrap_slider_recent', 'bootstrap_slider_space\\slider_recent' );
 }
