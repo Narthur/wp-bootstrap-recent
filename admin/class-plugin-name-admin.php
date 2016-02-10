@@ -20,6 +20,9 @@
  * @subpackage Plugin_Name/admin
  * @author     Your Name <email@example.com>
  */
+
+namespace bootstrap_slider_space;
+
 class Plugin_Name_Admin {
 
 	/**

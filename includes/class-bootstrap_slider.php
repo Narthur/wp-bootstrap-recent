@@ -10,7 +10,7 @@ class bootstrap_slider {
 
 	public function __construct() {
 
-		$this->plugin_name = 'plugin-name';
+		$this->plugin_name = 'bootstrap_slider';
 		$this->version = '1.0.0';
 
 		$this->load_dependencies();
@@ -23,9 +23,9 @@ class bootstrap_slider {
 	private function load_dependencies() {
 
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-bootstrap_slider-loader.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-bs_slider-i18n.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-plugin-name-admin.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-plugin-name-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-bootstrap_slider-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-bootstrap_slider-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-bootstrap_slider-public.php';
 
 		$this->loader = new Bootstrap_Slider_Loader();
 
