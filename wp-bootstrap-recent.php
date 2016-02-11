@@ -13,7 +13,7 @@
  * @package           wp-bootstrap-recent
  *
  * @wordpress-plugin
- * Plugin Name:       Responsive Bootstrap Recent Posts Slider
+ * Plugin Name:       Recent Posts Slider Lite
  * Plugin URI:        https://github.com/Narthur/wp-bootstrap-recent
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
@@ -159,6 +159,6 @@ namespace bootstrap_slider_space {
 		return $the_excerpt;
 	}
 
-	add_shortcode( 'bootstrap_slider', 'bootstrap_slider_space\\slider' );
+	add_shortcode( 'recent_slider_lite', 'bootstrap_slider_space\\slider' );
 
 }
