@@ -18,6 +18,7 @@ Here is a short description of the plugin.  This should be no more than 150 char
 * Responsive
 * Light weight
 * Easy to style using CSS
+* Automatically pulls in post featured-image thumbnails
 
 # Using the Shortcode
 
@@ -37,23 +38,16 @@ Available options include:
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-e.g.
-
-1. Upload `plugin-name.php` to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
+1. Upload `wp-bootstrap-recent` folder to the `/wp-content/plugins/` directory.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Place the `[recent_slider_lite]` shortcode within any post or page.
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= How do I set a thumbnail to be displayed in the slider? =
 
-An answer to that question.
-
-= What about foo bar? =
-
-Answer to foo bar dilemma.
+In the post edit screen, set your image as that post's featured image. [See WordPress' documentation for more
+information.](https://codex.wordpress.org/Post_Thumbnails#Setting_a_Post_Thumbnail)
 
 == Screenshots ==
 

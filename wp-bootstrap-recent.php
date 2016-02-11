@@ -35,16 +35,11 @@ namespace {
 
 namespace bootstrap_slider_space {
 
-	function activate() {
-		// activate
+	function activate_thumbnail_support() {
+		add_theme_support( 'post-thumbnails' );
 	}
 
-	function deactivate() {
-		// deactivate
-	}
-
-	register_activation_hook( __FILE__, 'bootstrap_slider_space\\activate' );
-	register_deactivation_hook( __FILE__, 'bootstrap_slider_space\\deactivate' );
+	add_action( 'after_setup_theme', 'activate_thumbnail_support' );
 
 	function enqueue_assets() {
 		enqueue_bootstrap();
