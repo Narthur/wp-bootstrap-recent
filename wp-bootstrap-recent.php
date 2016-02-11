@@ -47,6 +47,23 @@ namespace bootstrap_slider_space {
 	register_activation_hook( __FILE__, 'bootstrap_slider_space\\activate' );
 	register_deactivation_hook( __FILE__, 'bootstrap_slider_space\\deactivate' );
 
+	function enqueue_assets() {
+
+		wp_enqueue_style(
+			'bootstrap',
+			plugins_url( 'includes/bootstrap-3.3.6-dist/css/bootstrap.min.css', __FILE__ )
+		);
+
+		wp_enqueue_script(
+			'bootstrap',
+			plugins_url( 'includes/bootstrap-3.3.6-dist/js/bootstrap.min.js', __FILE__ ),
+			array( 'jquery' )
+		);
+
+	}
+
+	add_action( 'wp_enqueue_scripts', 'bootstrap_slider_space\\enqueue_assets' );
+
 	function slider( $atts ) {
 		return '<p>I\'m a slider</p>';
 	}
