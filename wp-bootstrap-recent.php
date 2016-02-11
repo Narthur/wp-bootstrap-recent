@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Recent Posts Slider Lite
  * Plugin URI:        https://github.com/Narthur/wp-bootstrap-recent
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Adds a light-weight and responsive recent posts slider shortcode.
  * Version:           1.0.0
  * Author:            Nathan Arthur
  * Author URI:        http://NathanArthur.com/
