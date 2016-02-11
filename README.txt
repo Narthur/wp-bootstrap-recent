@@ -44,7 +44,7 @@ Available options include:
 
 == Frequently Asked Questions ==
 
-= How do I set a thumbnail to be displayed in the slider? =
+= How do I set a post's thumbnail to be displayed in the slider? =
 
 In the post edit screen, set your image as that post's featured image. [See WordPress' documentation for more
 information.](https://codex.wordpress.org/Post_Thumbnails#Setting_a_Post_Thumbnail)
