@@ -47,7 +47,38 @@ namespace bootstrap_slider_space {
 	register_deactivation_hook( __FILE__, 'bootstrap_slider_space\\deactivate' );
 
 	function enqueue_assets() {
+		enqueue_bootstrap();
+		enqueue_unslider();
+		enqueue_bootstrap_slider();
+	}
 
+	function enqueue_bootstrap_slider() {
+		wp_enqueue_script(
+			'bootstrap-slider',
+			plugins_url( 'main.js', __FILE__ ),
+			array( 'jquery', 'unslider' )
+		);
+
+		wp_enqueue_style(
+			'bootstrap-slider',
+			plugins_url( 'style.css', __FILE__ )
+		);
+	}
+
+	function enqueue_unslider() {
+		wp_enqueue_style(
+			'unslider',
+			plugins_url( 'includes/unslider/dist/css/unslider.css', __FILE__ )
+		);
+
+		wp_enqueue_script(
+			'unslider',
+			plugins_url( 'includes/unslider/src/js/unslider.js', __FILE__ ),
+			array( 'jquery' )
+		);
+	}
+
+	function enqueue_bootstrap() {
 		wp_enqueue_style(
 			'bootstrap',
 			plugins_url( 'includes/bootstrap-3.3.6-dist/css/bootstrap.min.css', __FILE__ )
@@ -58,7 +89,6 @@ namespace bootstrap_slider_space {
 			plugins_url( 'includes/bootstrap-3.3.6-dist/js/bootstrap.min.js', __FILE__ ),
 			array( 'jquery' )
 		);
-
 	}
 
 	add_action( 'wp_enqueue_scripts', 'bootstrap_slider_space\\enqueue_assets' );
@@ -91,7 +121,7 @@ namespace bootstrap_slider_space {
 			$slides .= $slide;
 		}
 
-		return "<div class='recentPostsSlider'><ul>$slides</ul></div>";
+		return "<div class='bootstrap-slider'><ul>$slides</ul></div>";
 	}
 
 	function make_body_div( $p, $url ) {
