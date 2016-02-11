@@ -87,6 +87,7 @@ namespace bootstrap_slider_space {
 			$thumbnailDiv = make_thumbnail_div( $p, $url );
 			$bodyDiv      = make_body_div( $p, $url );
 			$slide        = '<li><div class="media">' . $thumbnailDiv . $bodyDiv . '</div></li>';
+
 			$slides .= $slide;
 		}
 
@@ -98,9 +99,10 @@ namespace bootstrap_slider_space {
 		$excerpt = get_excerpt_by_id( $p['ID'] );
 		$h4      = "<h4 class='media-heading'><a href='$url'>$title</a></h4>";
 		$text    = "<p>$excerpt</p>";
-		$bodyDiv = "<div class='media-body'>{$h4}{$text}</div>";
+		$icon    = '<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>';
+		$button  = "<a href='$url' class='btn btn-default btn-sm'>Read More $icon</a>";
 
-		return $bodyDiv;
+		return "<div class='media-body'>{$h4}{$text}{$button}</div>";
 	}
 
 	function make_thumbnail_div( $p, $url ) {
