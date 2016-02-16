@@ -9,6 +9,10 @@
 	box-shadow: none;
 }
 
+.single ~ .unslider-arrow.next, .single ~ .unslider-arrow.prev {
+	display:none;
+}
+
 .unslider-arrow.prev {
 	right: 50px;
 	left: auto;

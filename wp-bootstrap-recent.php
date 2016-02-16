@@ -95,7 +95,12 @@ namespace bootstrap_slider_space {
 		), $atts );
 
 		$recent_posts = get_recent_posts( $a );
-		$slides       = '';
+
+		return make_slider( $recent_posts );
+	}
+
+	function make_slider( $recent_posts ) {
+		$slides = '';
 
 		foreach ( $recent_posts as $p ) {
 			$url          = get_permalink( $p );
@@ -106,7 +111,9 @@ namespace bootstrap_slider_space {
 			$slides .= $slide;
 		}
 
-		return "<div class='bootstrap-slider'><ul>$slides</ul></div>";
+		$classes = ( count($recent_posts) > 1 ) ? 'bootstrap-slider' : 'bootstrap-slider single';
+
+		return "<div class='$classes'><ul>$slides</ul></div>";
 	}
 
 	function get_recent_posts( $a ) {
