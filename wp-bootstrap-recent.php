@@ -13,7 +13,7 @@
  * @package           wp-bootstrap-recent
  *
  * @wordpress-plugin
- * Plugin Name:       Recent Posts Slider Lite
+ * Plugin Name:       Simple Recent Posts Slider
  * Plugin URI:        https://github.com/Narthur/wp-bootstrap-recent
  * Description:       Adds a light-weight and responsive recent posts slider shortcode.
  * Version:           1.0.0
@@ -90,21 +90,11 @@ namespace bootstrap_slider_space {
 
 	function slider( $atts ) {
 		$a = shortcode_atts( array(
-			'quantity' => 3
+			'quantity' => 3,
+			'category' => null
 		), $atts );
 
-		$args = array(
-			'numberposts'      => $a['quantity'],
-			'offset'           => 0,
-			'category'         => 0,
-			'orderby'          => 'post_date',
-			'order'            => 'DESC',
-			'post_type'        => 'post',
-			'post_status'      => 'draft, publish, future, pending, private',
-			'suppress_filters' => true
-		);
-
-		$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+		$recent_posts = get_recent_posts( $a );
 		$slides       = '';
 
 		foreach ( $recent_posts as $p ) {
@@ -117,6 +107,23 @@ namespace bootstrap_slider_space {
 		}
 
 		return "<div class='bootstrap-slider'><ul>$slides</ul></div>";
+	}
+
+	function get_recent_posts( $a ) {
+		$categoryId = ( $a['category'] ) ? get_cat_ID($a['category']) : 0;
+
+		$args = array(
+			'numberposts'      => $a['quantity'],
+			'offset'           => 0,
+			'category'         => $categoryId,
+			'orderby'          => 'post_date',
+			'order'            => 'DESC',
+			'post_type'        => 'post',
+			'post_status'      => 'draft, publish, future, pending, private',
+			'suppress_filters' => true
+		);
+
+		return wp_get_recent_posts( $args, ARRAY_A );
 	}
 
 	function make_body_div( $p, $url ) {
@@ -154,6 +161,6 @@ namespace bootstrap_slider_space {
 		return $the_excerpt;
 	}
 
-	add_shortcode( 'recent_slider_lite', 'bootstrap_slider_space\\slider' );
+	add_shortcode( 'recent_slider_simple', 'bootstrap_slider_space\\slider' );
 
 }

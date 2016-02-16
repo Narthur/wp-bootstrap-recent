@@ -1,4 +1,4 @@
-=== Recent Posts Slider Lite ===
+=== Simple Recent Posts Slider ===
 Contributors: narthur
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=narthur%2ea%40gmail%2ecom&lc=US&item_name=Wp%20Bootstrap%20Recent&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: content slider, html slider, responsive, responsive slider, slider, slideshow, shortcode, bootstrap, twitter bootstrap, posts, recent posts, recent, carousel, content slideshow, horizontal slider, javascript, jquery, posts slider, slider plugin, thumbnail, thumbnails slider, wordpress slider, best slider, free slider, categories
@@ -30,11 +30,12 @@ Simply drop this string into any post or page:
 
 Add option/value pairs to the shortcode in order to override defaults like this:
 
-    [recent_slider_lite quantity=5]
+    [recent_slider_lite quantity=5 category=category_name]
 
 Available options include:
 
 * quantity (defaults to 3)
+* category
 
 == Installation ==
 
