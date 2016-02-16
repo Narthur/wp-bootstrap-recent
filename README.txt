@@ -1,7 +1,7 @@
 === Recent Posts Slider Lite ===
 Contributors: narthur
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=narthur%2ea%40gmail%2ecom&lc=US&item_name=Wp%20Bootstrap%20Recent&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
-Tags: comments, spam
+Tags: content slider, html slider, responsive, responsive slider, slider, slideshow, shortcode, bootstrap, twitter bootstrap, posts, recent posts, recent, carousel, content slideshow, horizontal slider, javascript, jquery, posts slider, slider plugin, thumbnail, thumbnails slider, wordpress slider, best slider, free slider, categories
 Requires at least: 3.0.1
 Tested up to: 3.4
 Stable tag: 4.3
