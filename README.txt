@@ -1,6 +1,6 @@
 === Recent Posts Slider Lite ===
 Contributors: narthur
-Donate link: http://example.com/
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=narthur%2ea%40gmail%2ecom&lc=US&item_name=Wp%20Bootstrap%20Recent&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: comments, spam
 Requires at least: 3.0.1
 Tested up to: 3.4
