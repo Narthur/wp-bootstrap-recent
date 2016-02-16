@@ -2,6 +2,10 @@
 	position: relative;
 }
 
+.unslider .bootstrap-slider a {
+	box-shadow: none;
+}
+
 .unslider-arrow.next, .unslider-arrow.prev {
 	bottom: 20px;
 	background-color: white;
