@@ -37,6 +37,22 @@ Available options include:
 * quantity (defaults to 3)
 * category
 
+# Styling using CSS
+
+Classes:
+
+| Class                                        | Description               |
+|----------------------------------------------|---------------------------|
+| `.unslider`                                  | Outer wrapper             |
+| `.bootstrap-slider`                          | Inner wrapper             |
+| `.unslider-arrow.next, .unslider-arrow.prev` | Next and previous buttons |
+| `.media-left`                                | Thumbnail area            |
+| `.media-body`                                | Content area              |
+| `.media-heading`                             | Post title                |
+| `.btn`                                       | "Read More" button        |
+
+For more information, see [Bootstrap 3's media object documentation](http://getbootstrap.com/components/#media).
+
 == Installation ==
 
 1. Upload `wp-bootstrap-recent` folder to the `/wp-content/plugins/` directory.
